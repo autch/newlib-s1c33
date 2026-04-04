@@ -1,6 +1,15 @@
 
 _BEGIN_STD_C
 
+#if defined(__S1C33__)
+/*
+ * S1C33 (Epson S1C33000 core, e.g. S1C33209 in P/ECE).
+ * ABI S5U1C33000C callee-saved: R0-R3 (4 regs) + SP + return address = 6 words.
+ */
+#define _JBLEN 6
+#define _JBTYPE int
+#endif
+
 #if defined(__or1k__) || defined(__or1knd__)
 /*
  * r1, r2, r9, r14, r16 .. r30, SR.

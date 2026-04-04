@@ -400,6 +400,11 @@
 #define _DOUBLE_IS_32BITS
 #endif
 
+#ifdef __S1C33__
+/* Epson S1C33000 core (e.g. S1C33209 in P/ECE): little-endian, IEEE 754 */
+#define __IEEE_LITTLE_ENDIAN
+#endif
+
 #if defined(__or1k__) || defined(__OR1K__) || defined(__OR1KND__)
 #define __IEEE_BIG_ENDIAN
 #endif
