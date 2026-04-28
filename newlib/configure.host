@@ -324,6 +324,13 @@ case "${host_cpu}" in
 	default_newlib_io_long_long="yes"
 	newlib_cflags="${newlib_cflags} -ffunction-sections -fdata-sections "
 	;;
+  s1c33)
+	machine_dir=s1c33
+	newlib_cflags="${newlib_cflags} -DPREFER_SIZE_OVER_SPEED -DSMALL_MEMORY -D_REENT_SMALL -DMISSING_SYSCALL_NAMES"
+	newlib_cflags="${newlib_cflags} -ffunction-sections -fdata-sections"
+	default_newlib_nano_malloc="yes"
+	default_newlib_atexit_dynamic_alloc="no"
+	;;
   sh | sh64)
 	machine_dir=sh
 	;;
@@ -556,6 +563,10 @@ case "${host}" in
 	;;
   powerpcle-*-pe)
 	posix_dir=posix
+	;;
+  s1c33-*-*)
+	sys_dir=s1c33
+	have_crt0="no"
 	;;
   sh*-*)
 	sys_dir=sh
@@ -841,6 +852,10 @@ newlib_cflags="${newlib_cflags} -DCLOCK_PROVIDED -DMALLOC_PROVIDED -DEXIT_PROVID
 	newlib_cflags="${newlib_cflags} -DSMALL_MEMORY -D_REENT_SMALL"
 	;;
   riscv*-*-*)
+	syscall_dir=syscalls
+	;;
+  s1c33-*-*)
+	default_newlib_io_long_long="yes"
 	syscall_dir=syscalls
 	;;
   sh*-*-*)

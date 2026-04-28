@@ -37,6 +37,9 @@ endif
 if HAVE_LIBC_SYS_RTEMS_DIR
 include %D%/rtems/Makefile.inc
 endif
+if HAVE_LIBC_SYS_S1C33_DIR
+include %D%/s1c33/Makefile.inc
+endif
 if HAVE_LIBC_SYS_SH_DIR
 include %D%/sh/Makefile.inc
 endif

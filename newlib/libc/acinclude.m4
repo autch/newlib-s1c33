@@ -20,6 +20,7 @@ m4_foreach_w([SYS_DIR], [
   netware
   or1k
   rdos rtems
+  s1c33
   sh sysmec sysnec810 sysnecv850 sysvi386 sysvnecv70
   tic80 tirtos
   w65
@@ -55,6 +56,7 @@ m4_foreach_w([MACHINE], [
   or1k
   powerpc pru
   riscv rl78 rx
+  s1c33
   sh sparc spu
   tic4x tic6x tic80
   v850 visium

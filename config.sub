@@ -1253,6 +1253,7 @@ case $cpu-$vendor in
 			| pyramid \
 			| riscv | riscv32 | riscv32be | riscv64 | riscv64be \
 			| rl78 | romp | rs6000 | rx \
+			| s1c33 \
 			| s390 | s390x \
 			| score \
 			| sh | shl \
